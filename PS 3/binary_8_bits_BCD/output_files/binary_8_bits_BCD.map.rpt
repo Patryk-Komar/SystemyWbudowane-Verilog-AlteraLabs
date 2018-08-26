@@ -1,0 +1,510 @@
+Analysis & Synthesis report for binary_8_bits_BCD
+Thu Mar 08 20:34:04 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Mar 08 20:34:04 2018       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; binary_8_bits_BCD                           ;
+; Top-level Entity Name           ; binary_8_bits_BCD                           ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 41                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; binary_8_bits_BCD  ; binary_8_bits_BCD  ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; binary_8_bits_BCD.v              ; yes             ; User Verilog HDL File        ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                     ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                    ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                     ;         ;
+; db/lpm_divide_eho.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_eho.tdf  ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/abs_divider_kbg.tdf ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/alt_u_div_ove.tdf   ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_kn9.tdf     ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_4p9.tdf     ;         ;
+; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_bpo.tdf  ;         ;
+; db/lpm_divide_epo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_epo.tdf  ;         ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/abs_divider_nbg.tdf ;         ;
+; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/alt_u_div_uve.tdf   ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_nn9.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                       ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                               ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 217                                                                                                 ;
+;                                             ;                                                                                                     ;
+; Combinational ALUT usage for logic          ; 430                                                                                                 ;
+;     -- 7 input functions                    ; 1                                                                                                   ;
+;     -- 6 input functions                    ; 3                                                                                                   ;
+;     -- 5 input functions                    ; 11                                                                                                  ;
+;     -- 4 input functions                    ; 73                                                                                                  ;
+;     -- <=3 input functions                  ; 342                                                                                                 ;
+;                                             ;                                                                                                     ;
+; Dedicated logic registers                   ; 0                                                                                                   ;
+;                                             ;                                                                                                     ;
+; I/O pins                                    ; 41                                                                                                  ;
+;                                             ;                                                                                                     ;
+; Total DSP Blocks                            ; 0                                                                                                   ;
+;                                             ;                                                                                                     ;
+; Maximum fan-out node                        ; lpm_divide:Div1|lpm_divide_epo:auto_generated|abs_divider_nbg:divider|alt_u_div_uve:divider|op_20~1 ;
+; Maximum fan-out                             ; 23                                                                                                  ;
+; Total fan-out                               ; 1309                                                                                                ;
+; Average fan-out                             ; 2.56                                                                                                ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name       ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |binary_8_bits_BCD                    ; 430 (12)            ; 0 (0)                     ; 0                 ; 0          ; 41   ; 0            ; |binary_8_bits_BCD                                                                                             ; binary_8_bits_BCD ; work         ;
+;    |displayNumber:displayHexOne|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|displayNumber:displayHexOne                                                                 ; displayNumber     ; work         ;
+;    |displayNumber:displayHexTwo|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|displayNumber:displayHexTwo                                                                 ; displayNumber     ; work         ;
+;    |displayNumber:displayHexZero|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|displayNumber:displayHexZero                                                                ; displayNumber     ; work         ;
+;    |lpm_divide:Div0|                  ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div0                                                                             ; lpm_divide        ; work         ;
+;       |lpm_divide_bpo:auto_generated| ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                               ; lpm_divide_bpo    ; work         ;
+;          |abs_divider_kbg:divider|    ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg   ; work         ;
+;             |alt_u_div_ove:divider|   ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove     ; work         ;
+;    |lpm_divide:Div1|                  ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div1                                                                             ; lpm_divide        ; work         ;
+;       |lpm_divide_epo:auto_generated| ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div1|lpm_divide_epo:auto_generated                                               ; lpm_divide_epo    ; work         ;
+;          |abs_divider_nbg:divider|    ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div1|lpm_divide_epo:auto_generated|abs_divider_nbg:divider                       ; abs_divider_nbg   ; work         ;
+;             |alt_u_div_uve:divider|   ; 100 (100)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Div1|lpm_divide_epo:auto_generated|abs_divider_nbg:divider|alt_u_div_uve:divider ; alt_u_div_uve     ; work         ;
+;    |lpm_divide:Mod0|                  ; 88 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod0                                                                             ; lpm_divide        ; work         ;
+;       |lpm_divide_eho:auto_generated| ; 88 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod0|lpm_divide_eho:auto_generated                                               ; lpm_divide_eho    ; work         ;
+;          |abs_divider_kbg:divider|    ; 88 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg   ; work         ;
+;             |alt_u_div_ove:divider|   ; 88 (88)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove     ; work         ;
+;    |lpm_divide:Mod1|                  ; 74 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod1                                                                             ; lpm_divide        ; work         ;
+;       |lpm_divide_eho:auto_generated| ; 74 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod1|lpm_divide_eho:auto_generated                                               ; lpm_divide_eho    ; work         ;
+;          |abs_divider_kbg:divider|    ; 74 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod1|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg   ; work         ;
+;             |alt_u_div_ove:divider|   ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod1|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove     ; work         ;
+;    |lpm_divide:Mod2|                  ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod2                                                                             ; lpm_divide        ; work         ;
+;       |lpm_divide_eho:auto_generated| ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod2|lpm_divide_eho:auto_generated                                               ; lpm_divide_eho    ; work         ;
+;          |abs_divider_kbg:divider|    ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod2|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg   ; work         ;
+;             |alt_u_div_ove:divider|   ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |binary_8_bits_BCD|lpm_divide:Mod2|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove     ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_eho ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_eho ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 8              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_epo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_eho ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 442                         ;
+;     arith             ; 223                         ;
+;         0 data inputs ; 52                          ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 48                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 185                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 3                           ;
+;     shared            ; 33                          ;
+;         0 data inputs ; 22                          ;
+;         1 data inputs ; 11                          ;
+; boundary_port         ; 41                          ;
+;                       ;                             ;
+; Max LUT depth         ; 17.80                       ;
+; Average LUT depth     ; 15.26                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Mar 08 20:33:41 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off binary_8_bits_BCD -c binary_8_bits_BCD
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file binary_8_bits_bcd.v
+    Info (12023): Found entity 1: displayNumber File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 1
+    Info (12023): Found entity 2: binary_8_bits_BCD File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 21
+Info (12127): Elaborating entity "binary_8_bits_BCD" for the top level hierarchy
+Info (10264): Verilog HDL Case Statement information at binary_8_bits_BCD.v(65): all case item expressions in this case statement are onehot File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 65
+Info (12128): Elaborating entity "displayNumber" for hierarchy "displayNumber:displayHexZero" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 72
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 38
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 36
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_eho.tdf
+    Info (12023): Found entity 1: lpm_divide_eho File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_eho.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/abs_divider_kbg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/alt_u_div_ove.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_kn9.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_4p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
+    Info (12023): Found entity 1: lpm_divide_bpo File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_bpo.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 38
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/binary_8_bits_BCD.v Line: 38
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_epo.tdf
+    Info (12023): Found entity 1: lpm_divide_epo File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_divide_epo.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/abs_divider_nbg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
+    Info (12023): Found entity 1: alt_u_div_uve File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/alt_u_div_uve.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
+    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/db/lpm_abs_nn9.tdf Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 471 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 31 output pins
+    Info (21061): Implemented 430 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 747 megabytes
+    Info: Processing ended: Thu Mar 08 20:34:04 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:47
+
+

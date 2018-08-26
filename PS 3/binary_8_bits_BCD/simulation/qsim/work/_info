@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Studia/Semestr VI/Systemy wbudowane/PeeS Tszy/binary_8_bits_BCD/simulation/qsim
+vbinary_8_bits_BCD
+Z1 !s110 1520540160
+!i10b 1
+!s100 >TVHGPYE93HTJJ1@WY:m^2
+IjEB]n2aGmBfLL06cj_ni11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1520540158
+8binary_8_bits_BCD.vo
+Fbinary_8_bits_BCD.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1520540160.000000
+!s107 binary_8_bits_BCD.vo|
+!s90 -work|work|binary_8_bits_BCD.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+nbinary_8_bits_@b@c@d
+vbinary_8_bits_BCD_vlg_vec_tst
+R1
+!i10b 1
+!s100 iJo7cA9]G4U`QkaLBS8dE2
+I41O<bWQA`Io>SSe=UfY9l0
+R2
+R0
+w1520540155
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R5
+R6
+nbinary_8_bits_@b@c@d_vlg_vec_tst
